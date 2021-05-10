@@ -7,7 +7,8 @@
 body {
     height: 100vh;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-around;
     align-items: center;
     font-family: 'Nanum Pen Script', cursive;
     font-size: 60px;
@@ -17,6 +18,21 @@ body {
 
 .hidden {
     display: none;
+}
+.visible {
+    display: block;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+.underline {
+    text-decoration: underline;
+}
+
+p {
+    display: none;
+    font-size: 90px;
 }
 
 @keyframes mybtn {

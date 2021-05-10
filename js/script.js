@@ -1,16 +1,15 @@
 // First point
-var student = {
+var child = {
     firstName: "John",
     lastName: "Doe",
     birthDate: "3/28/2000"
 }
-for (var key in student) {
-    console.log(student[key]);
+for (var key in child) {
+    console.log(child[key]);
 }
-// --First point
 
-// Students list
-var students = [
+// Children list
+var children = [
     {
         firstName: "Jim",
         lastName: "Dean",
@@ -23,7 +22,7 @@ var students = [
     },
     {
         firstName: "Janet",
-        lastName: "Dick",
+        lastName: "Doe",
         birthDate: "9/27/1998"
     },
     {
@@ -37,20 +36,21 @@ var students = [
         birthDate: "7/29/1998"
     }
 ];
-// --Students list
 
-var stdsPrint = document.getElementById("students"); // --> Students list print in html
-var newStd = Object.create(student); // --> User added student
+var chlnPrint = document.getElementById("students"); // --> Students list print in HTML
+var newChd = Object.create(child); // --> User's added student
 
 // User type student generalities that will be added to the students list
 document.getElementById("add").addEventListener("click", function() {
-    newStd.firstName = prompt("Please insert first name");
-    newStd.lastName = prompt("Please insert last name");
-    newStd.birthDate = prompt("Please insert birth date");
-    alert("Student successfully added. Thanks!")
-    students.push(newStd);
-    for (var key in students) {
-        stdsPrint.innerHTML += "<li>" + students[key].firstName + " " + students[key].lastName + "</li>";
-    }
     document.getElementById("add").classList.add("hidden");
+    document.getElementById("h1").classList.add("hidden");
+    newChd.firstName = prompt("Please insert first name");
+    newChd.lastName = prompt("Please insert last name");
+    newChd.birthDate = prompt("Please insert birth date");
+    alert("Student successfully added. Thanks!")
+    children.push(newChd);
+    document.getElementById("p").classList.add("visible");
+    for (var key in children) {
+        chlnPrint.innerHTML += "<li>" + children[key].firstName + " " + children[key].lastName + "</li>";
+    }
 });
