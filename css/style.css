@@ -15,6 +15,10 @@ body {
     background-image: linear-gradient(to top right, #0d61e0, #0de0d7);
 }
 
+.hidden {
+    display: none;
+}
+
 @keyframes mybtn {
     0% {
         transform: scale(1);
@@ -52,6 +56,10 @@ body {
 
 ul {
     list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
 }
 ul li {
     padding: 20px 0;

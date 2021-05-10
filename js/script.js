@@ -52,4 +52,5 @@ document.getElementById("add").addEventListener("click", function() {
     for (var key in students) {
         stdsPrint.innerHTML += "<li>" + students[key].firstName + " " + students[key].lastName + "</li>";
     }
+    document.getElementById("add").classList.add("hidden");
 });
