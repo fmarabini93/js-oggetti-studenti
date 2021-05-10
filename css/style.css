@@ -9,4 +9,56 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: 'Nanum Pen Script', cursive;
+    font-size: 60px;
+    color: #ffffff;
+    background-image: linear-gradient(to top right, #0d61e0, #0de0d7);
+}
+
+@keyframes mybtn {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.5);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+@keyframes myname {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.4;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+#add {
+    border: 0;
+    border-radius: 10px;
+    padding: 15px 40px;
+    font-size: 40px;
+    cursor: pointer;
+    font-family: 'Nanum Pen Script', cursive;
+    color: #0d61e0;
+    background-color: #ffffff;
+    animation: mybtn 1.5s linear infinite;
+}
+
+ul {
+    list-style: none;
+}
+ul li {
+    padding: 20px 0;
+}
+ul li:last-child {
+    font-weight: bold;
+    font-size: 70px;
+    color: #fffb00;
+    animation: myname 2s linear infinite;
 }
