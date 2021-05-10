@@ -42,14 +42,14 @@ var newChd = Object.create(child); // --> User's added student
 
 // User type student generalities that will be added to the students list
 document.getElementById("add").addEventListener("click", function() {
-    document.getElementById("add").classList.add("hidden");
-    document.getElementById("h1").classList.add("hidden");
+    document.getElementById("add").classList.add("hidden"); // --> Hide button
+    document.getElementById("h1").classList.add("hidden"); // --> Hide title
     newChd.firstName = prompt("Please insert first name");
     newChd.lastName = prompt("Please insert last name");
     newChd.birthDate = prompt("Please insert birth date");
     alert("Student successfully added. Thanks!")
     children.push(newChd);
-    document.getElementById("p").classList.add("visible");
+    document.getElementById("p").classList.add("visible"); // --> Show paragraph
     for (var key in children) {
         chlnPrint.innerHTML += "<li>" + children[key].firstName + " " + children[key].lastName + "</li>";
     }
