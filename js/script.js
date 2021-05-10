@@ -39,3 +39,14 @@ var stdsPrint = document.getElementById("students");
 for (var key in students) {
     stdsPrint.innerHTML += "<li>" + students[key].firstName + " " + students[key].lastName + "</li>";
 }
+
+document.getElementById("add").addEventListener("click", myFunction);
+
+function myFunction(firstName, lastName, birthDate) {
+    var firstName;
+    var lastName;
+    var birthDate;
+    firstName = prompt("Please insert first name");
+    lastName = prompt("Please insert last name");
+    birthDate = prompt("Please insert birth date");
+}
