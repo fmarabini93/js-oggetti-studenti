@@ -4,6 +4,7 @@ var child = {
     lastName: "Doe",
     birthDate: "3-28-2000"
 }
+
 for (var key in child) {
     console.log(child[key]);
 }
@@ -83,6 +84,7 @@ document.getElementById("add").addEventListener("click", function() {
     newChd.birthDate = date;
 
     alert("Student successfully added. Thanks!")
+    
     children.push(newChd);
 
     document.getElementById("p").classList.add("visible"); // --> Show paragraph
