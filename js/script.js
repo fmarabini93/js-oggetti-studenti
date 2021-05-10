@@ -2,7 +2,7 @@
 var child = {
     firstName: "John",
     lastName: "Doe",
-    birthDate: "3-28-2000"
+    birthDate: "3/28/2000"
 }
 
 for (var key in child) {
@@ -14,27 +14,27 @@ var children = [
     {
         firstName: "Jim",
         lastName: "Dean",
-        birthDate: "1-12-1999"
+        birthDate: "1/12/1999"
     },
     {
         firstName: "Jane",
         lastName: "Dave",
-        birthDate: "2-4-2001"
+        birthDate: "2/4/2001"
     },
     {
         firstName: "Janet",
         lastName: "Doe",
-        birthDate: "9-27-1998"
+        birthDate: "9/27/1998"
     },
     {
         firstName: "Jason",
         lastName: "Dawn",
-        birthDate: "10-2-2002"
+        birthDate: "10/2/2002"
     },
     {
         firstName: "Jack",
         lastName: "Dawson",
-        birthDate: "7-29-1998"
+        birthDate: "7/29/1998"
     }
 ];
 
