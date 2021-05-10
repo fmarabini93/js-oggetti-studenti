@@ -1,13 +1,15 @@
+// First point
 var student = {
     firstName: "John",
     lastName: "Doe",
     birthDate: "3/28/2000"
 }
-var stdPrint = document.getElementById("student");
 for (var key in student) {
-    stdPrint.innerHTML += "<li>" + student[key] + "</li>";
+    console.log(student[key]);
 }
+// --First point
 
+// Students list
 var students = [
     {
         firstName: "Jim",
@@ -35,18 +37,19 @@ var students = [
         birthDate: "7/29/1998"
     }
 ];
-var stdsPrint = document.getElementById("students");
-for (var key in students) {
-    stdsPrint.innerHTML += "<li>" + students[key].firstName + " " + students[key].lastName + "</li>";
-}
+// --Students list
 
-document.getElementById("add").addEventListener("click", myFunction);
+var stdsPrint = document.getElementById("students"); // --> Students list print in html
+var newStd = Object.create(student); // --> User added student
 
-function myFunction(firstName, lastName, birthDate) {
-    var firstName;
-    var lastName;
-    var birthDate;
-    firstName = prompt("Please insert first name");
-    lastName = prompt("Please insert last name");
-    birthDate = prompt("Please insert birth date");
-}
+// User type student generalities that will be added to the students list
+document.getElementById("add").addEventListener("click", function() {
+    newStd.firstName = prompt("Please insert first name");
+    newStd.lastName = prompt("Please insert last name");
+    newStd.birthDate = prompt("Please insert birth date");
+    alert("Student successfully added. Thanks!")
+    students.push(newStd);
+    for (var key in students) {
+        stdsPrint.innerHTML += "<li>" + students[key].firstName + " " + students[key].lastName + "</li>";
+    }
+});
